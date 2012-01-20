@@ -10,6 +10,7 @@ URL:		http://cdw.sourceforge.net/
 Source0:	%{name}/%{name}-%{version}.tar.gz 
 
 BuildRequires:	libcdio-devel, ncurses-devel, %{_lib}burn-devel
+BuildRequires:	ncursesw-devel
 Requires:	dvd+rw-tools,wodim,genisoimage,xorriso 
 
 
