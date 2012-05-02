@@ -1,14 +1,11 @@
 Name:		cdw
-Version:	0.7.0 
+Version:	0.7.1
 Release:	1
 Summary:	Front-end for tools used for burning data CD/DVD
-
 Group:		Archiving/Cd burning
 License:	GPLv2+
 URL:		http://cdw.sourceforge.net/
-
-Source0:	%{name}/%{name}-%{version}.tar.gz 
-
+Source0:	http://downloads.sourceforge.net/project/cdw/cdw/cdw%200.7.1/%{name}-%{version}.tar.gz
 BuildRequires:	libcdio-devel, ncurses-devel, %{_lib}burn-devel
 BuildRequires:	ncursesw-devel
 Requires:	dvd+rw-tools,wodim,genisoimage,xorriso 
