@@ -1,15 +1,14 @@
 Name:		cdw
 Version:	0.7.1
-Release:	1
+Release:	2
 Summary:	Front-end for tools used for burning data CD/DVD
 Group:		Archiving/Cd burning
 License:	GPLv2+
 URL:		http://cdw.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/cdw/cdw/cdw%200.7.1/%{name}-%{version}.tar.gz
-BuildRequires:	libcdio-devel, ncurses-devel, %{_lib}burn-devel
+BuildRequires:	pkgconfig(libcdio), pkgconfig(ncurses), pkgconfig(libburn-1)
 BuildRequires:	ncursesw-devel
-Requires:	dvd+rw-tools,wodim,genisoimage,xorriso 
-
+Requires:	dvd+rw-tools genisoimage xorriso 
 
 %description
 cdw is a ncurses based front-end for some command-line tools used for burning
@@ -23,18 +22,15 @@ CD or DVD disc using md5sum or some of  programs that verifies SHA hashes.
 %prep
 %setup -q
 
-
 %build
 %configure2_5x
 %make
-
 
 %install
 %makeinstall_std
 
 %check
 make check LIBS="-lm"
-
 
 %files
 %{_bindir}/*
