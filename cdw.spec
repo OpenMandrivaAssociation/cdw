@@ -5,7 +5,7 @@ Summary:	Front-end for tools used for burning data CD/DVD
 Group:		Archiving/Cd burning
 License:	GPLv2+
 URL:		http://cdw.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/cdw/cdw/cdw%200.7.1/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/project/cdw/cdw/cdw%200.8.1/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(libcdio), pkgconfig(ncurses), pkgconfig(libburn-1)
 BuildRequires:	ncursesw-devel
 Requires:	dvd+rw-tools genisoimage xorriso 
@@ -23,14 +23,11 @@ CD or DVD disc using md5sum or some of  programs that verifies SHA hashes.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
-
-%check
-make check LIBS="-lm"
+%make_install
 
 %files
 %{_bindir}/*
