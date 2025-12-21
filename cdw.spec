@@ -6,6 +6,11 @@ Group:		Archiving/Cd burning
 License:	GPLv2+
 URL:		https://cdw.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/cdw/cdw/cdw%200.8.1/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libcdio), pkgconfig(ncurses), pkgconfig(libburn-1)
 BuildRequires:	ncursesw-devel
 Requires:	dvd+rw-tools genisoimage xorriso 
