@@ -1,6 +1,6 @@
 Name:		cdw
 Version:	0.8.1
-Release:	1
+Release:	2
 Summary:	Front-end for tools used for burning data CD/DVD
 Group:		Archiving/Cd burning
 License:	GPLv2+
